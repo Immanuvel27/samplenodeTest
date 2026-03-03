@@ -13,5 +13,9 @@ app.get('/', (req, res) => {
 app.get('/api/testApi', (req, res) => {
   res.json({ message: 'Test API working' });
 });
+app.get('/api/webhookResponse', (req, res) => {
+  console.log("Webhook response received:", req.query);
+  res.json({ message: "Webhook response received" });
+});
 
 module.exports = app;
